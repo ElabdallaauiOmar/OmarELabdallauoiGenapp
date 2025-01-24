@@ -1,0 +1,59 @@
+/* user-case-split.component.css */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  .input-group {
+    margin-bottom: 15px;
+  }
+  
+  input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  .result {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+  }
+  
+  .error {
+    color: red;
+    margin-top: 10px;
+  }
+  
+  .user-case-box {
+    margin: 15px 0;
+    padding: 10px;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .user-case-box h4 {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+  
+  .user-case-box p {
+    margin: 5px 0 0;
+    font-size: 1rem;
+  }
+  

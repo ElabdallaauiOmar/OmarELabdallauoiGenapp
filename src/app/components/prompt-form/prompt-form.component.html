@@ -1,0 +1,38 @@
+<div class="container mt-5">
+  <h2>Generate User Cases</h2>
+  <form (ngSubmit)="onSubmit()" class="mt-3">
+    <div class="mb-3">
+      <label for="besoin" class="form-label">Enter Besoin</label>
+      <input
+        type="text"
+        id="besoin"
+        [(ngModel)]="besoin"
+        name="besoin"
+        class="form-control"
+        placeholder="e.g., Create a hospital management system"
+        required
+      />
+    </div>
+    <div class="mb-3">
+      <label for="maxTokens" class="form-label">Max Tokens</label>
+      <input
+        type="number"
+        id="maxTokens"
+        [(ngModel)]="maxTokens"
+        name="maxTokens"
+        class="form-control"
+        min="1"
+        max="2000"
+        required
+      />
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="isLoading">
+      {{ isLoading ? 'Submitting...' : 'Submit' }}
+    </button>
+  </form>
+
+  <h3 class="mt-4">User Case Response:</h3>
+  <pre class="bg-light p-3 border rounded" style="white-space: pre-wrap;">
+    {{ userCaseResponse }}
+  </pre>
+</div>

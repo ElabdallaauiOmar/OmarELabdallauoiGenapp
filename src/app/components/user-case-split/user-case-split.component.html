@@ -1,0 +1,29 @@
+<!-- user-case-split.component.html -->
+<div class="container">
+  <h1>Test User Cases Split API</h1>
+
+  <div class="input-group">
+    <label for="userCaseId">Enter UserCase ID:</label>
+    <input type="number" [(ngModel)]="userCaseId" placeholder="Enter ID, e.g., 220" required />
+  </div>
+
+  <div class="input-group">
+    <button (click)="onFetchUserCases()">Fetch and Split User Cases</button>
+  </div>
+
+  <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+
+  <div *ngIf="result" class="result">
+    <h3 *ngIf="result.length > 0">User Cases Split Successfully</h3>
+    <div *ngFor="let caseItem of result" class="user-case-box">
+      <label>
+        <input type="checkbox" [(ngModel)]="caseItem.selected" /> Select this case
+      </label>
+      <h4>Cas d'utilisation {{ caseItem.id }}:</h4>
+      <p>{{ caseItem.content }}</p>
+    </div>
+    <div class="selected-count">
+      <p>You have selected {{ selectedCases.length }} case(s).</p>
+    </div>
+  </div>
+</div>
